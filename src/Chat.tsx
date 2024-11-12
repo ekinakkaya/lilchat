@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm"; // For GitHub Flavored Markdown
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"; // You can choose a different theme
+//import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+//import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"; // You can choose a different theme
+
+
 
 interface Message {
   role: "user" | "assistant";
@@ -238,28 +240,6 @@ const Chat: React.FC = () => {
                     <ReactMarkdown
                       className="markdown overflow-wrap break-words"
                       remarkPlugins={[remarkGfm]}
-                      components={{
-                        code({ node, inline, className, children, ...props }) {
-                          const match = /language-(\w+)/.exec(className || "");
-                          return !inline && match ? (
-                            <SyntaxHighlighter
-                              children={String(children).replace(/\n$/, "")}
-                              style={oneDark}
-                              language={match[1]}
-                              PreTag="div"
-                              {...props}
-                              className="overflow-wrap break-words"
-                            />
-                          ) : (
-                            <code
-                              className={`className overflow-wrap break-words`}
-                              {...props}
-                            >
-                              {children}
-                            </code>
-                          );
-                        },
-                      }}
                     >
                       {msg.content}
                     </ReactMarkdown>
