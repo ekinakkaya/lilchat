@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Chat2 = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   return (
     <div className="flex flex-row min-h-screen m-0 bg-slate-700 p-2 text-white font-serif">
-      <div className="left-sidebar-container flex flex-col min-w-72 bg-gray-800 p-4 m-2 text-white rounded-xl">
-        <button className="ml-auto w-12 text-md rounded-xl border-2 border-dashed px-4 py-2 text-white transition-all hover:bg-slate-700">
+      {isMenuOpen && (
+        
+      <div className="left-sidebar-container flex flex-col w-72 bg-gray-800 px-6 py-4 m-2 text-white rounded-xl transition-opacity">
+        <button
+          className="w-12 text-md rounded-xl border-2 border-dashed px-4 py-2 text-white transition-all hover:bg-slate-700"
+          onClick={() => setIsMenuOpen(false)}
+        >
           {"<"}
         </button>
         <div className="settings bg-slate-700 p-4 rounded-xl mt-8 border-2 border-dashed ">
@@ -49,11 +56,19 @@ const Chat2 = () => {
           </div>
         </div>
       </div>
-      <div className="right-side-container flex flex-col m-0 bg-slate-700 p-0 text-white">
+      )}
+
+      <div className="right-side-container flex flex-col m-0 bg-slate-700 p-0 text-white w-full">
         <nav className=" navbar m-2 flex items-center justify-start rounded-xl bg-gray-800 p-4 px-6">
-          <button className=" w-12 text-md rounded-xl border-2 border-dashed px-4 py-2 text-white transition-all hover:bg-slate-700">
+          {!isMenuOpen && (
+          <button
+            className=" w-12 text-md rounded-xl border-2 border-dashed px-4 py-2 text-white transition-all hover:bg-slate-700"
+            onClick={() => setIsMenuOpen(true)}
+          >
             ☰
           </button>
+
+          )}
           <div className="pl-4 font-serif text-lg font-thin text-white">
             ^0^ lilchat
           </div>
