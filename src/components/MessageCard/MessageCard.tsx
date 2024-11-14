@@ -1,5 +1,3 @@
-import React from "react";
-
 type MessageCardProps = {
   message: string;
   owner: "user" | "assistant";

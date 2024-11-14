@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavBar } from "./components/NavBar/NavBar";
 import { MessagesPanel } from "./components/MessagesPanel/MessagesPanel";
 import { MessageInput } from "./components/MessageInput/MessageInput";
