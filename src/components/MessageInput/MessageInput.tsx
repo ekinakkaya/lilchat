@@ -2,7 +2,7 @@ import { sendRequestToApi } from "../../services/HyperbolicApiService/Hyperbolic
 import { getAllSettings } from "../../services/SettingsStorage/SettingsStorage";
 
 const onSendClick = () => {
-  let res = sendRequestToApi(getAllSettings())
+  const res = sendRequestToApi(getAllSettings())
   console.log(res)
 }
 
@@ -13,7 +13,7 @@ export const MessageInput = () => {
         className="w-full h-24 border border-gray-300 rounded-lg p-2 bg-gray-700"
         placeholder="Type your message..."
       ></textarea>
-      <button className=" text-md rounded-xl border-2 border-dashed px-4 py-2 text-white transition-all hover:bg-slate-600 ml-4 text-2xl " onClick={() => sendRequestToApi(getAllSettings())}>
+      <button className=" text-md rounded-xl border-2 border-dashed px-4 py-2 text-white transition-all hover:bg-slate-600 ml-4 text-2xl " onClick={() => onSendClick()}>
         {">"}
       </button>
     </div>

@@ -1,5 +1,3 @@
-import React from "react";
-
 type LeftMenuCloseButtonProps = {
     setIsMenuOpen: (state: boolean) => void
 }

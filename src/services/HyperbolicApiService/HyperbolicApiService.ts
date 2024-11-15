@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { saveSetting, SettingsType } from "../SettingsStorage/SettingsStorage";
+import { SettingsType } from "../SettingsStorage/SettingsStorage";
 
 export const sendRequestToApi = (settings: SettingsType) => {
   // https://docs.hyperbolic.xyz/docs/typescript-api
@@ -26,7 +26,6 @@ export const sendRequestToApi = (settings: SettingsType) => {
     top_p: settings.top_p,
     max_tokens: settings.max_tokens
   }).then((res) => {
-    console.log(res)
     return res;
   });
 };

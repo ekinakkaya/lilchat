@@ -10,9 +10,7 @@ export type ChatMessage = {
   message: string;
 };
 
-// TODO: implement saving settings to local storage
-
-// TODO: implement making requests and getting responses
+// TODO: implement a message array that keeps the messages
 // TODO: implement sending all messages with the request
 
 const Chat2 = () => {
