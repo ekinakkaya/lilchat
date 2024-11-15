@@ -12,29 +12,6 @@ export type ChatMessage = {
 
 // TODO: implement saving settings to local storage
 
-type SettingsType = {
-  api_endpoint: string;
-  auth_key: string;
-  model_name: string;
-  max_tokens: number;
-  temperature: number;
-  top_p: number;
-};
-
-const saveSettingsToLocalStorage = ({api_endpoint, auth_key, model_name, max_tokens = 2048, temperature = 0.8, top_p = 0.9}: SettingsType) => {
-  const settings: SettingsType = {
-    api_endpoint: api_endpoint,
-    auth_key: auth_key,
-    model_name: model_name,
-    max_tokens: max_tokens,
-    temperature: temperature,
-    top_p: top_p
-  }
-
-  localStorage.setItem("settings", JSON.stringify(settings))
-}
-
-
 // TODO: implement making requests and getting responses
 // TODO: implement sending all messages with the request
 
