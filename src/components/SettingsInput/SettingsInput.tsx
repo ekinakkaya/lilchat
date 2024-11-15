@@ -53,6 +53,7 @@ export const SettingsInput = ({
           type="password"
           className={`w-full h-${inputHeight} border border-gray-300 rounded-lg p-2 bg-gray-700`}
           onChange={onInputChange}
+          value={settingValue}
           defaultValue={defaultValue}
         ></input>
       ) : (
@@ -60,6 +61,7 @@ export const SettingsInput = ({
           className={`w-full h-${inputHeight} border border-gray-300 rounded-lg p-2 bg-gray-700`}
           placeholder={inputPlaceholder}
           onChange={onInputChange}
+          value={settingValue}
           defaultValue={defaultValue}
         ></textarea>
       )}
