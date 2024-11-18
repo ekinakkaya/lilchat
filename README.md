@@ -8,6 +8,8 @@ you can try the app with your own Hyperbolic AI API key [here](https://lilchat.v
 
 # screenshots
 
-![alt text](image.png)
+![alt text](images/image-2.png)
 
-![alt text](image-1.png)
+![alt text](images/image-3.png)
+
+![alt text](images/image-4.png)
