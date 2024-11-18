@@ -47,6 +47,14 @@ export const SettingsPanel = ({
           />
 
           <SettingsInput
+            description="System Prompt"
+            inputPlaceholder="You are a helpful assistant."
+            inputHeight={18}
+            setting={"system_prompt"}
+            defaultValue="You are a helpful assistant."
+          />
+
+          <SettingsInput
             description="Max Tokens"
             inputPlaceholder="4096"
             inputHeight={18}

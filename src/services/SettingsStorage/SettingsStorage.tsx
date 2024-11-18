@@ -2,6 +2,7 @@ export type SettingsType = {
   api_endpoint: string;
   auth_key: string;
   model_name: string;
+  system_prompt: string;
   max_tokens: number;
   temperature: number;
   top_p: number;
@@ -37,6 +38,7 @@ export const getAllSettings = () => {
         api_endpoint: getSetting("api_endpoint"),
         auth_key: getSetting("auth_key"),
         model_name: getSetting("model_name"),
+        system_prompt: getSetting("system_prompt"),
         max_tokens: maxTokens,
         temperature: temperature,
         top_p: topP
