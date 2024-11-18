@@ -44,6 +44,5 @@ export const getAllSettings = () => {
         top_p: topP
     }
 
-    console.log(settings);
     return settings;
 }

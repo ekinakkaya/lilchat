@@ -14,8 +14,8 @@ export const NavBar = ({isMenuOpen, setIsMenuOpen}: NavBarProps) => {
           ☰
         </button>
       )}
-      <div className="pl-4 font-serif text-lg font-thin text-white">
-        ^0^ lilchat | LlĽĆʜæţ
+      <div className="pl-4 font-serif text-xl font-thin text-white">
+        lilchat
       </div>
     </nav>
   );

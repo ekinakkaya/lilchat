@@ -13,12 +13,17 @@ export const addMessageToMessages = (
       message: choice.message.content ?? "",
     }
   });
+  console.log("new messages from the api response")
+  console.log(newMessages)
+  console.log("all messages before changing the 'messages' state")
+  console.log(messages)
 
   setMessages([
     ...messages,
     ...newMessages
   ])
 
+  console.log("all messages after api response")
   console.log(messages)
 };
 
